@@ -1,0 +1,38 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# C++ / Compilation
+*.exe
+*.dll
+*.so
+*.o
+*.obj
+*.a
+*.lib
+*.pdb
+*.ilk
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.tlog
+x64/
+Debug/
+Release/
+
+# Data and results (generated)
+data/*.txt
+!data/.gitkeep
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
