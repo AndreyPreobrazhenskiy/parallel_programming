@@ -2,20 +2,20 @@
 setlocal enabledelayedexpansion
 
 echo ================================
-echo Automated testing (Large Matrices)
+echo Automated testing
 echo ================================
 
-:: Проверка наличия исполняемого файла
+:: Check for executable file
 if not exist "matrix_mult.exe" (
     echo No executable file found. Starting compilation...
     call build.bat
     if !errorlevel! neq 0 exit /b 1
 )
 
-:: Создание папки data, если нет
+:: Create data folder if not exists
 if not exist "data" mkdir data
 
-:: Генерация больших матриц (500x500)
+:: Generate large matrices (500x500)
 echo.
 echo Generating large matrices (500x500)...
 python scripts/gen_matrix.py 500 data/input_A.txt
@@ -39,12 +39,25 @@ if !errorlevel! neq 0 (
 )
 
 echo.
-echo Test 2: Different number of threads
+echo Test 2: Different number of threads (with verification)
 echo ----------------------------------------
 for %%T in (1 2 4 8) do (
     echo.
     echo Running on %%T threads...
     matrix_mult.exe data/input_A.txt data/input_B.txt data/output_C.txt %%T
+    if !errorlevel! neq 0 (
+        echo Program execution error on %%T threads!
+        pause
+        exit /b 1
+    )
+    
+    :: Verification for each thread count
+    python scripts/verify.py data/input_A.txt data/input_B.txt data/output_C.txt
+    if !errorlevel! neq 0 (
+        echo VERIFICATION FAILED for %%T threads!
+        pause
+        exit /b 1
+    )
 )
 
 echo.
