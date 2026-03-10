@@ -148,6 +148,93 @@ ALL VERIFICATION TESTS PASSED
 ```
 
 
+| Тест | Размер | Время (сек) | Производительность | Погрешность | Статус |
+|------|--------|-------------|-------------------|-------------|--------|
+| 1 | 3×3 | ~0 | — | 0.0 | ✅ |
+| 2 | 100×100 | 0.001 | 2.01 GFLOPS | 3.2×10⁻¹² | ✅ |
+| 3 | 500×500 | 0.134 | 1.86 GFLOPS | 1.3×10⁻¹¹ | ✅ |
+
+> **Вывод:** Программа корректно выполняет умножение матриц. Погрешность результатов не превышает `1.3×10⁻¹¹`, что находится в пределах машинной точности типа `double`. Сложность алгоритма соответствует теоретической **O(N³)**.
+
+---
+
+### Вывод `benchmark.bat`
+
+```cmd
+================================
+Benchmark
+================================
+
+Testing different matrix sizes:
+- Sizes: 200, 400, 800, 1000, 1200, 1600, 2000
+
+
+========================================
+Matrix Size: 200 x 200
+========================================
+Generated 200x200 matrix -> data/bench_A.txt
+Generated 200x200 matrix -> data/bench_B.txt
+  Time: 0.0079785 sec
+  Performance: 2.00539 GFLOPS
+
+========================================
+Matrix Size: 400 x 400
+========================================
+Generated 400x400 matrix -> data/bench_A.txt
+Generated 400x400 matrix -> data/bench_B.txt
+  Time: 0.066841 sec
+  Performance: 1.91499 GFLOPS
+
+========================================
+Matrix Size: 800 x 800
+========================================
+Generated 800x800 matrix -> data/bench_A.txt
+Generated 800x800 matrix -> data/bench_B.txt
+  Time: 0.718232 sec
+  Performance: 1.42572 GFLOPS
+
+========================================
+Matrix Size: 1000 x 1000
+========================================
+Generated 1000x1000 matrix -> data/bench_A.txt
+Generated 1000x1000 matrix -> data/bench_B.txt
+  Time: 2.06139 sec
+  Performance: 0.97022 GFLOPS
+
+========================================
+Matrix Size: 1200 x 1200
+========================================
+Generated 1200x1200 matrix -> data/bench_A.txt
+Generated 1200x1200 matrix -> data/bench_B.txt
+  Time: 3.99141 sec
+  Performance: 0.86586 GFLOPS
+
+========================================
+Matrix Size: 1600 x 1600
+========================================
+Generated 1600x1600 matrix -> data/bench_A.txt
+Generated 1600x1600 matrix -> data/bench_B.txt
+  Time: 13.7268 sec
+  Performance: 0.596787 GFLOPS
+
+========================================
+Matrix Size: 2000 x 2000
+========================================
+Generated 2000x2000 matrix -> data/bench_A.txt
+Generated 2000x2000 matrix -> data/bench_B.txt
+  Time: 40.4224 sec
+  Performance: 0.39582 GFLOPS
+
+================================
+Benchmark completed
+================================
+```
+
+
+
+
+
+
 
 
 
