@@ -1,4 +1,4 @@
-<img width="2982" height="1778" alt="speedup_plot" src="https://github.com/user-attachments/assets/c575d477-d031-4f17-acff-c8f23350a013" /># Умножение матриц с распараллеливанием (OpenMP)
+# Умножение матриц с распараллеливанием (OpenMP)
 
 ## Описание
 Программа на C++ для перемножения квадратных матриц с использованием OpenMP. Автоматическая верификация через Python (NumPy).
@@ -329,6 +329,7 @@ All experiments completed
 ### GFLOPS heatmap
 
 <img width="2231" height="1479" alt="gflops_heatmap" src="https://github.com/user-attachments/assets/e2a414f2-5cd9-446a-8f7c-928eab06c765" />
+
 
 
 
