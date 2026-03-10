@@ -67,6 +67,85 @@ scripts\benchmark.bat
 
 P.S. **Обязательно** иметь на компьютере **MinGW-w64 (g++)** для компиляции.
 
+---
+
+## Результаты
+
+### Вывод `test_verification.bat`
+
+================================
+Verification Test
+================================
+
+[Test 1] Small matrix (3x3)
+----------------------------------------
+Reading matrices...
+Matrix Size: 3x3
+Calculating...
+Time: 0 seconds
+Performance: inf GFLOPS
+Result saved to data/test_C.txt
+METRIC:N:3
+METRIC:TIME:0
+METRIC:GFLOPS:inf
+Reading matrices...
+Matrix A shape: (3, 3)
+Matrix B shape: (3, 3)
+Matrix C shape: (3, 3)
+Calculating reference result...
+Comparing results...
+Max difference: 0.0
+VERIFICATION: SUCCESS
+
+[Test 2] Medium matrix (100x100)
+----------------------------------------
+Generated 100x100 matrix -> data/test_A.txt
+Generated 100x100 matrix -> data/test_B.txt
+Reading matrices...
+Matrix Size: 100x100
+Calculating...
+Time: 0.0009974 seconds
+Performance: 2.00521 GFLOPS
+Result saved to data/test_C.txt
+METRIC:N:100
+METRIC:TIME:0.0009974
+METRIC:GFLOPS:2.00521
+Reading matrices...
+Matrix A shape: (100, 100)
+Matrix B shape: (100, 100)
+Matrix C shape: (100, 100)
+Calculating reference result...
+Comparing results...
+Max difference: 3.183231456205249e-12
+VERIFICATION: SUCCESS
+
+[Test 3] Large matrix (500x500)
+----------------------------------------
+Generated 500x500 matrix -> data/test_A.txt
+Generated 500x500 matrix -> data/test_B.txt
+Reading matrices...
+Matrix Size: 500x500
+Calculating...
+Time: 0.134081 seconds
+Performance: 1.86455 GFLOPS
+Result saved to data/test_C.txt
+METRIC:N:500
+METRIC:TIME:0.134081
+METRIC:GFLOPS:1.86455
+Reading matrices...
+Matrix A shape: (500, 500)
+Matrix B shape: (500, 500)
+Matrix C shape: (500, 500)
+Calculating reference result...
+Comparing results...
+Max difference: 1.2732925824820995e-11
+VERIFICATION: SUCCESS
+
+================================
+ALL VERIFICATION TESTS PASSED
+================================
+
+
 
 
 
