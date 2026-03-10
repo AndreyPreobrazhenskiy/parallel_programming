@@ -315,17 +315,21 @@ All experiments completed
 
 ---
 
+
 ### График зависимости времени выполнения от количества потоков:
 
 <img width="2377" height="1478" alt="time_log_plot" src="https://github.com/user-attachments/assets/2d71c3f8-020a-4ee5-af46-b964a7b2b2ab" />
+
 
 ### График эффективности распараллеливания по размеру матрицы:
 
 <img width="2982" height="1778" alt="speedup_plot" src="https://github.com/user-attachments/assets/fcc5fd5d-854e-4071-8114-b9301167df2a" />
 
+
 ### GFLOPS heatmap
 
 <img width="2231" height="1479" alt="gflops_heatmap" src="https://github.com/user-attachments/assets/e2a414f2-5cd9-446a-8f7c-928eab06c765" />
+
 
 
 
